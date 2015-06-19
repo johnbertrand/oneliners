@@ -1,3 +1,24 @@
+## IMAPS  
+Testing IMAPS with openssl  
+`openssl s_client -connect 192.168.3.116:993`  
+`a login user pass`  
+List folders  
+`a list """*"`  
+Select a Folder  
+`a select INBOX` 
+Fetch the first 5 messages  
+`a fetch 1:5 (uid) 
+
+## POP3S  
+#login, list, retrieve
+`openssl s_client -connect 192.168.3.116:995`  
+`user user@domain.com`  
+`pass yourpassword`  
+`list`  
+`retr 1`  
+
+
+
 ## /etc/shadow  
 Generate a password hash for use in /etc/shadow  
 The second field of /etc/shadow contains the password info, it has 3 parts delimited by $.  The first field is a value which denotes the hashing algorithm, ie 6=SHA-512. The key is below.  The second field is the salt, the third is the hash of the password concatenated with the salt.
