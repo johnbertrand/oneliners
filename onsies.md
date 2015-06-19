@@ -24,32 +24,32 @@ DN=DistinguishedNameQualifier
        -out domain.csr`
 
 #### Generate a CSR from an existing key.
-`openssl req \
-       -key domain.key \
+`openssl req 
+       -key domain.key 
        -new -out domain.csr`
 
 
 #### Generate a CSR from an Existing Certificate and Private Key
-`openssl x509 \
-       -in domain.crt \
-       -signkey domain.key \
+`openssl x509 
+       -in domain.crt 
+       -signkey domain.key 
        -x509toreq -out domain.csr`
 
 #### Generate a Self Signed Certificate
-`openssl req \
-       -newkey rsa:2048 -nodes -keyout domain.key \
+`openssl req 
+       -newkey rsa:2048 -nodes -keyout domain.key 
        -x509 -days 365 -out domain.crt`
 
 #### Generate a Self-Signed Certificate from an Existing Private Key
-`openssl req \
-       -key domain.key \
-       -new \
+`openssl req 
+       -key domain.key 
+       -new 
        -x509 -days 365 -out domain.crt`
 
 #### Generate a Self-Signed Certificate from an Existing Private Key and CSR
-`openssl x509 \
-       -signkey domain.key \
-       -in domain.csr \
+`openssl x509 
+       -signkey domain.key
+       -in domain.csr 
        -req -days 365 -out domain.crt`
 
 
@@ -83,22 +83,22 @@ openssl req -noout -modulus -in domain.csr | openssl md5`
 
 
 #### Encrypt a Private Key
-`openssl rsa -des3 \
-       -in unencrypted.key \
+`openssl rsa -des3 
+       -in unencrypted.key 
        -out encrypted.key`
 
 
 #### Decrypt a Private Key
-`openssl rsa \
-       -in encrypted.key \
+`openssl rsa 
+       -in encrypted.key 
        -out decrypted.key`
 
 
 ### Convert Certificate Formats
 
 #### Convert PEM to DER
-`openssl x509 \
-       -in domain.crt \
+`openssl x509 
+       -in domain.crt 
        -outform der -out domain.der`
 
 
