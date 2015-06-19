@@ -5,7 +5,7 @@ ignore empty lines or comments
 
 
 ## openssl
-taken from https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs
+(these examples taken from https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs )  
 
 #### x509 subject to avoid answeing questions
 `-subj "/C=US/ST=CA/L=San Francisco/O=SFEMA.net/OU=Operations/CN=www.sfema.net"`
