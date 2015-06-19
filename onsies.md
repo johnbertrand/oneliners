@@ -1,3 +1,21 @@
+## /etc/shadow  
+Generate a password hash for use in /etc/shadow  
+The second field of /etc/shadow contains the password info, it has 3 parts delimited by $.  The first field is a value which denotes the hashing algorithm, ie 6=SHA-512. The key is below.  The second field is the salt, the third is the hash of the password concatenated with the salt.
+The default hashing algorithm for Centos/RHEL can be found in /etc/login.def.
+
+$1 = MD5  
+$2 = Blowfish  
+$2 = eksblowfish  
+$5 = SHA-256  
+$6 = SHA-512 
+
+#### Generate a SHA512 password hash, and random salt  
+`
+python -c 'import string; import random; import crypt; salt= "$6$"+"".join(random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for _ in range(8)); print crypt.crypt("password", salt)'
+
+$6$JkYSALVJ$fdR5VgjKOv/CTe1N/Go.WqQsw3kfgbsEo2qrBMIgtVGFVIFXceFcJPVlh30h7AHrQajiM6luy7Tg0ikhCS1Fj.
+`
+
 
 ## grep
 ignore empty lines or comments  
