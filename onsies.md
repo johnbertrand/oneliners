@@ -11,7 +11,8 @@ $6 = SHA-512
 
 #### Generate a SHA512 password hash, and random salt  
 
-`python -c 'import string; import random; import crypt; salt= "$6$"+"".join(random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for _ in range(8)); print crypt.crypt("password", salt)'`
+`python -c 'import string; import random; import crypt; salt= "$6$"+"".join(random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for _ in range(8)); print crypt.crypt("password", salt)'`  
+
 $6$JkYSALVJ$fdR5VgjKOv/CTe1N/Go.WqQsw3kfgbsEo2qrBMIgtVGFVIFXceFcJPVlh30h7AHrQajiM6luy7Tg0ikhCS1Fj.
 
 
