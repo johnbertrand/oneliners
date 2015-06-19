@@ -10,7 +10,7 @@ Fetch the first 5 messages
 `a fetch 1:5 (uid) 
 
 ## POP3S  
-#login, list, retrieve
+login, list, retrieve
 `openssl s_client -connect 192.168.3.116:995`  
 `user user@domain.com`  
 `pass yourpassword`  
