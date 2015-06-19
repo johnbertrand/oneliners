@@ -1,11 +1,11 @@
 
 ### grep
-#ignore empty lines or comments
+ignore empty lines or comments
 grep -v '^\s*\#'
 
 
 ## openssl
-#taken from https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs
+taken from https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs
 
 #### x509 subject to avoid answeing questions
 `-subj "/C=US/ST=CA/L=San Francisco/O=SFEMA.net/OU=Operations/CN=www.sfema.net"`
@@ -54,7 +54,7 @@ DN=DistinguishedNameQualifier
 
 
 ### View Certificates
-#Certificate and CSR files are encoded in PEM format, which is not readily human-readable.
+Certificate and CSR files are encoded in PEM format, which is not readily human-readable.
 
 #### View CSR Entries
 `openssl req -text -noout -verify -in domain.csr`
@@ -75,7 +75,7 @@ DN=DistinguishedNameQualifier
 
 
 #### Verify a Private Key Matches a Certificate and CSR
-#If the output of each command is identical there is an extremely high probability that the private key, certificate, and CSR are related. 
+If the output of each command is identical there is an extremely high probability that the private key, certificate, and CSR are related. 
 
 `openssl rsa -noout -modulus -in domain.key | openssl md5
 openssl x509 -noout -modulus -in domain.crt | openssl md5
