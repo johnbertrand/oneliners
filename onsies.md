@@ -1,7 +1,7 @@
 
 ### grep
 ignore empty lines or comments
-grep -v '^\s*\#'
+`grep -v '^\s*\#'`
 
 
 ## openssl
