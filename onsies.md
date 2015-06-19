@@ -19,8 +19,8 @@ ST=StateOrProvinceName
 DN=DistinguishedNameQualifier
 
 #### Generating a KEY and CSR at the same time
-`openssl req \
-       -newkey rsa:2048 -nodes -keyout domain.key \
+`openssl req   
+       -newkey rsa:2048 -nodes -keyout domain.key  
        -out domain.csr`
 
 #### Generate a CSR from an existing key.
