@@ -108,6 +108,6 @@ openssl req -noout -modulus -in domain.csr | openssl md5`
 
 
 ### PLOS
-#This one pulls a random PLOS article and dumps the text good to use for the -program argument on your screen saver
-curl -s "http://www.plosone.org/article/fetchObject.action?representation=PDF&uri=$(lynx -dump 
-www.plosone.org | grep pone\\. | awk '{ print $2; }' | shuf | head -1 | sed -n -e s'/^.*article\///p')" | pdftotext - -
+This one pulls a random PLOS article and dumps the text good to use for the -program argument on your screen saver
+`curl -s "http://www.plosone.org/article/fetchObject.action?representation=PDF&uri=$(lynx -dump 
+www.plosone.org | grep pone\\. | awk '{ print $2; }' | shuf | head -1 | sed -n -e s'/^.*article\///p')" | pdftotext` - -
