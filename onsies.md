@@ -1,3 +1,7 @@
+##Nagios XI  
+Reseting the nagios admin password  
+` /usr/local/nagiosxi/scripts/reset_nagiosadmin_password.php --password=<newpassword>`
+
 ## IMAPS  
 Testing IMAPS with openssl  
 `openssl s_client -connect 192.168.3.116:993`  
