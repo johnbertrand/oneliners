@@ -2,6 +2,12 @@
 Reseting the nagios admin password  
 ` /usr/local/nagiosxi/scripts/reset_nagiosadmin_password.php --password=<newpassword>`
 
+Fixing the database  
+`service mysqld stop`  
+`/usr/local/nagiosxi/scripts/repairmysql.sh nagios`  
+`service mysqld start`
+
+
 ## IMAPS  
 Testing IMAPS with openssl  
 `openssl s_client -connect 192.168.3.116:993`  
