@@ -1,3 +1,7 @@
+##CENTOS
+#### Install EPEL  
+`yum install epel-release`  
+
 ##Nagios XI  
 Reseting the nagios admin password  
 ` /usr/local/nagiosxi/scripts/reset_nagiosadmin_password.php --password=<newpassword>`
