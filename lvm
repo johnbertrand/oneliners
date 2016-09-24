@@ -1,0 +1,14 @@
+#LVM Rescue pattern
+
+Boot your rescue media.
+Scan for volume groups:
+# lvm vgscan -v
+
+Activate all volume groups:
+# lvm vgchange -a y
+
+List logical volumes:
+# lvm lvs –all
+
+mount your lv
+# mount /dev/{VOLGORUP}/volume /some/mount/point
